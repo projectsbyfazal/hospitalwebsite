@@ -1,0 +1,351 @@
+:root{
+	--common-color: #222;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+/* Common utility classes */
+.btn{
+	padding: 8px 20px;
+	background-color: #16a085;
+	color: white;
+	border-radius: 50px;
+	display: inline-block;
+	margin: 3% 0;
+	transition: .4s;
+}
+.btn:hover{
+	background-color: whitesmoke;
+	color: #16a085;
+	box-shadow: 2px 2px 5px gray;
+}
+.row{
+	width: 80%;
+	margin: 3% auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.heading{
+	font-size: 42px;
+	text-shadow: 2px 2px 2px #999;
+	padding: 4% 0;
+	text-align: center;
+}
+.heading span{
+	color: #16a085;
+}
+.para{
+	line-height: 23px;
+	font-size: 15px;
+}
+/* ---------------------------- */
+nav{
+	width: 100%;
+	height: 85px;
+	padding: 0 5%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	box-shadow: 2px 2px 10px gray;
+	position: sticky;
+	top: 0;
+}
+nav h2{
+	font-size: 30px;
+	color: var(--common-color);
+	font-family: cursive;
+}
+#navlinks{
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+}
+ul a{
+	font-size: 19px;
+	padding: 8px 20px;
+	color: var(--common-color);
+}
+ul a:hover{
+	color: #16a085;
+}
+.menubtn{
+	display: none;
+}
+.menubtn div{
+	width: 28px;
+	height: 4px;
+	margin: 5px 0;
+	background-color: var(--common-color);
+	border-radius: 5px;
+	transform-origin: left;
+	transition: .3s;
+}
+/* Home section ----------------- */
+.home{
+	width: 100%;
+	height: calc(100vh - 85px);
+	background-color: whitesmoke;
+	display: flex;
+	align-items: center;
+}
+.home-column{
+	flex-basis: 50%;
+}
+.home-column h1{
+	text-align: left;
+}
+.home-column img{
+	width: 100%;
+	text-align: center;
+}
+/* availability -------------- */
+.content{
+	flex-basis: 23%;
+	border: 3px solid #16a085;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+}
+.content img{
+	height: 50px;	
+}
+/* services section ---------------- */
+#services{
+	background-color: whitesmoke;
+	width: 100%;
+	padding: 1% 0;
+}
+.service-column{
+	flex-basis: 32%;
+	border-radius: 5px;
+	border: 3px solid #16a085;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+.service-column img{
+	width: 21%;
+}
+.service-column h2{
+	padding: 3% 0;
+	text-shadow: 2px 2px 1px lightgray;
+}
+/* about us -------------------------- */
+#about{
+	width: 100%;
+}
+.about-column h2{
+	font-size: 36px;
+	text-shadow: 2px 2px 1px lightgray;
+	padding: 20px 0;
+}
+.about-column img{
+	width: 80%;
+}
+.about-column{
+	flex-basis: 50%;
+}
+/* our Doctors -------------------------- */
+#doctors{
+	width: 100%;
+	background-color: whitesmoke;
+	padding-bottom: 10px;
+}
+.doc-column{
+	flex-basis: 32%;
+	text-align: center;
+	padding: 15px;
+	border: 3px solid #16a085;
+	border-radius: 5px;
+}
+.doc-column img{
+	width: 200px;
+	height: 180px;
+	border-radius: 5px;
+	border: 3px solid #16a085;
+	object-fit: cover;
+}
+.doc-column span img{
+	width: 40px;
+	padding: 7px;
+	height: auto;
+	cursor: pointer;
+}
+.doc-column span img:hover{
+	background-color: #16a085;
+}
+.doc-column h2{
+	font-size: 23px;
+	margin: 10px 0;
+}
+.doc-column p{
+	margin: 10px 0;
+}
+
+/* Appointment section */
+#appointment{
+	width: 50%;
+	position: fixed;
+	left: 25%;
+	top: 0%;
+	background-color: whitesmoke;
+	padding: 20px 5%;
+	border: 4px solid #16a085;
+	border-radius: 10px;
+	box-shadow: 3px 3px 30px gray, -3px -3px 30px gray;
+	text-align: center;
+	opacity: 0;
+	z-index: -1;
+	transition: .3s;
+}
+#appointment input{
+	width: 100%;
+	height: 40px;
+	border-radius: 5px;
+	border: 3px solid #16a085;
+	margin: 7px 0;
+	padding: 5px 15px;
+}
+#appointment button{
+	padding: 8px 30px;
+	border-radius: 5px;
+	border: 3px solid #16a085;
+	font-size: 18px;
+	margin: 10px 0;
+	cursor: pointer;
+	background-color: #16a085;
+	color: white;
+}
+#appointment button:hover{
+	background-color: transparent;
+	color: #16a085;
+}
+#appointment b{
+	font-size: 45px;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	cursor: pointer;
+}
+
+/* reviews section -------------------------- */
+#reviews{
+	width: 100%;
+}
+.review-column{
+	flex-basis: 30%;
+	border-radius: 5px;
+	border: 3px solid #16a085;
+	text-align: center;
+}
+.review-column div{
+	border-radius: 0 0 50% 50%;
+	background-color: #16a085;
+	padding: 20px 0;
+	color: white;
+}
+.review-column div span{
+	color: gold;
+}
+.review-column img{
+	width: 80px; height: 80px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid whitesmoke;
+	object-position: top;
+}
+.review-column p{
+	padding: 20px;
+}
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: whitesmoke;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer p{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* media queries for mobile screen */
+@media (max-width: 768px){
+	nav{
+		background-color: whitesmoke;
+	}
+	nav h2{
+	font-size: 30px;
+	z-index: 10;
+	}
+	#navlinks{
+		position: absolute;
+		width: 100%;
+		height: 50vh;
+		top: -60vh;
+		left: 0;
+		background-color: whitesmoke;
+		flex-direction: column;
+		justify-content: space-evenly;
+		box-shadow: 3px 3px 10px gray;
+		padding-top: 15%;
+		transition: .3s;
+		z-index: 9;
+	}
+	.menubtn{
+		display: block;
+		z-index: 10;
+	}
+	.btn{
+		font-size: 15px;
+		padding: 8px 15px;
+	}
+	.heading{
+		font-size: 27px;
+	}
+	.row{
+		flex-direction: column;
+		width: 75%;
+	}
+	.home{
+		align-items: center;
+		height: fit-content;
+	}
+	.home-column img{
+		width: 75%;
+		text-align: center;
+	}
+	.about-column h2{
+		font-size: 27px;
+	}
+	.about-column img{
+		width: 100%;
+	}
+	.content, .doc-column, .review-column{
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	#appointment{
+	width: 90%;
+	left: 5%;
+	}
+	#appointment h1{
+		font-size: 22px;
+	}
+	footer p{
+	font-size: 68%;
+}
+}
